@@ -16,11 +16,7 @@
     
 **When you run `$ ls -l` your output will look something like this...**
 
-```shell
-$ls -l /Users/Admin/Desktop/date.txt
-
-rwxrwxrwx user group date.txt
-```
+<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 51 33 am" src="https://user-images.githubusercontent.com/72744507/167752785-f9ced595-4981-41fd-9068-81c208a0f319.png">
 
 **The three sets of `rwx` coincide with the below table**
 
@@ -55,24 +51,15 @@ rwxrwxrwx user group date.txt
 
 `$ chmod [options] <permissions> <file>`
 
-`
-$ chmod 777 /Users/Admin/Desktop/date.txt` would give all classifications (UGO) access to read, write and execute
+`$ chmod 777 /Users/Admin/Desktop/date.txt` would give all classifications (UGO) access to read, write and execute
 
-```shell
-$ls -l /Users/Admin/Desktop/date.txt
-
-rwxrwxrwx user group date.txt
-```
+<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 51 33 am" src="https://user-images.githubusercontent.com/72744507/167752785-f9ced595-4981-41fd-9068-81c208a0f319.png">
 
 
-`
-$ chmod 755 /Users/Admin/Desktop/date.txt` would give the user access to read, write and execute, and the group and others access to only read and execute
+`$ chmod 755 /Users/Admin/Desktop/date.txt` would give the user access to read, write and execute, and the group and others access to only read and execute
 
-```shell
-$ls -l /Users/Admin/Desktop/date.txt
+<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 53 14 am" src="https://user-images.githubusercontent.com/72744507/167752962-09604bc7-5945-44ee-ae14-8a4e3e7d3bd6.png">
 
-rwxr-xr-x user group date.txt
-```
 
 ## chmod Options
 
