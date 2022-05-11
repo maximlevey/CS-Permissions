@@ -55,13 +55,7 @@ $ chmod [options] <permissions> <path>
 
 `$ chmod 777 /Users/Admin/Desktop/date.txt` would give all classifications (UGO) access to read, write and execute
 
-<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 51 33 am" src="https://user-images.githubusercontent.com/72744507/167752785-f9ced595-4981-41fd-9068-81c208a0f319.png">
-
-
 `$ chmod 755 /Users/Admin/Desktop/date.txt` would give the user access to read, write and execute, and the group and others access to only read and execute
-
-<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 53 14 am" src="https://user-images.githubusercontent.com/72744507/167752962-09604bc7-5945-44ee-ae14-8a4e3e7d3bd6.png">
-
 
 ## chmod Options
 
@@ -83,8 +77,6 @@ Using the chown command, we can change the owner or group of a file.
 $ chown [options] <user>:<group> <path>
 ```
 `$ chown max.levey:admin /Users/Admin/Desktop/date.txt` would change the user to `max.levey` and the group to `admin` 
-
-<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 51 33 am" src="https://user-images.githubusercontent.com/72744507/167752785-f9ced595-4981-41fd-9068-81c208a0f319.png">
 
 `$ chown max.levey /Users/Admin/Desktop/date.txt` would change the user to `max.levey` without effecting the group
 
