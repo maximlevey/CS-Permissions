@@ -76,25 +76,25 @@ Using the chown command, we can change the owner or group of a file.
 ```shell
 $ chown [options] <user>:<group> <path>
 ```
-`$ chown max.levey:admin /Users/Admin/Desktop/date.txt` would change the user to `max.levey` and the group to `admin` 
+`$ chown steve:admin /Users/Admin/Desktop/date.txt` would change the file user to `steve` and the file group to `admin` 
 
-`$ chown max.levey /Users/Admin/Desktop/date.txt` would change the user to `max.levey` without effecting the group
+`$ chown steve /Users/Admin/Desktop/date.txt` would change the file user to `steve` without effecting the group
 
-`$ chown :admin /Users/Admin/Desktop/date.txt` would change the group to `admin` without effecting the user
+`$ chown :admin /Users/Admin/Desktop/date.txt` would change the file group to `admin` without effecting the user
 
 **We can also change owners on files specifically owned by another user with `--from`**
 
 ```shell
 $ chown --from=<existing_user> <user> <path>
 ```
-`$ chown --from=max.levey root /Users/Admin/Desktop/date.txt` would change the user to `root` **if** the file user is `max.levey`
+`$ chown --from=bob steve /Users/Admin/Desktop/date.txt` would change the file user to `steve` **only if** the file user is `bob`
 
 **The same can be done for groups**
 
 ```shell
 $ chown --from=:<existing_group> :<group> <path>
 ```
-`$ chown --from=:admin :wheel /Users/Admin/Desktop/date.txt` would change the group to `wheel` **if** the file group is `admin`
+`$ chown --from=:admin :wheel /Users/Admin/Desktop/date.txt` would change the file group to `wheel` **only if** the file group is `admin`
 
 ## chown Options
 
