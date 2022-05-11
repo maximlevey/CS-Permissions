@@ -49,7 +49,9 @@
 
 **By running chmod using the above numbers, we can specify the permissions for each classification**
 
-`$ chmod [options] <permissions> <file>`
+```shell
+$ chmod [options] <permissions> <path>
+```
 
 `$ chmod 777 /Users/Admin/Desktop/date.txt` would give all classifications (UGO) access to read, write and execute
 
@@ -74,4 +76,44 @@
 |--version|	Output version information and exit.|
 
 ## Changing File Owners & Groups
+
+Using the chown command, we can change the owner or group of a file.
+
+```shell
+$ chown [options] <user>:<group> <path>
+```
+`$ chown max.levey:admin /Users/Admin/Desktop/date.txt` would change the user to `max.levey` and the group to `admin` 
+
+<img align="center" img width="718" alt="Screen Shot 2022-05-11 at 11 51 33 am" src="https://user-images.githubusercontent.com/72744507/167752785-f9ced595-4981-41fd-9068-81c208a0f319.png">
+
+`$ chown max.levey /Users/Admin/Desktop/date.txt` would change the user to `max.levey` without effecting the group
+
+`$ chown :admin /Users/Admin/Desktop/date.txt` would change the group to `admin` without effecting the user
+
+**We can also change owners on files specifically owned by another user with `--from`**
+
+```shell
+$ chown --from=<existing_user> <user> <path>
+```
+`$ chown --from=max.levey root /Users/Admin/Desktop/date.txt` would change the user to `root` **if** the file user is `max.levey`
+
+**The same can be done for groups**
+
+```shell
+$ chown --from=:<existing_group> :<group> <path>
+```
+`$ chown --from=:admin :wheel /Users/Admin/Desktop/date.txt` would change the group to `wheel` **if** the file group is `admin`
+
+## chown Options
+
+
+| Option     | Outcome     |
+|------------|-------------| 
+|-c| 	Like -v, but gives verbose output only when a change is actually made.|
+--from| Change the owner or group of each file only if its current owner or group match those specified.
+|-f| 	Quiet mode; suppress most error messages.|
+|-v| 	Verbose mode; output a diagnostic message for every file processed.|
+|-R| 	Change files and directories recursively.|
+|--help|	Display a help message and exit.|
+|--version|	Output version information and exit.|
 
