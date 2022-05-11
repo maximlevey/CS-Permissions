@@ -1,2 +1,1 @@
-# CS-chmod
-chown / chmod Cheat Sheet
+# File Permissions Cheat Sheet
